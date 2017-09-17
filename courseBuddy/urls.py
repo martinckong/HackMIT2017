@@ -19,4 +19,5 @@ urlpatterns = [
     url(r'^peoples/$', views.peoples_list, name='peoples'),
     url(r'^form/$', views.form, name='form'),
     url(r'^data/$', views.data, name='data'),
+    url(r'^peoples/match/(?P<student_id>[0-9]+)/$', views.match, name='match'),
 ]
