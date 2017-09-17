@@ -16,4 +16,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
+    url(r'^peoples/$', views.peoples_list, name='peoples'),
+    url(r'^form/$', views.form, name='form'),
+    url(r'^data/$', views.data, name='data'),
 ]

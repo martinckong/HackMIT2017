@@ -1,0 +1,27 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'courseBuddy/stylesheets/style.css' %}" />
+
+<body>
+    <form action="/action_page.php">
+      First name:<br>
+      <input type="text" name="firstname" value="">
+      <br>
+      Last name:<br>
+      <input type="text" name="lastname" value="">
+      <br>
+      ID:<br>
+      <input type="text" name="personid" value="">
+      <br>
+      Year in school:<br>
+      <input type="radio" name="year" value="1">1st<br>
+      <input type="radio" name="year" value="2">2nd<br>
+      <input type="radio" name="year" value="3">3rd<br>
+      <input type="radio" name="year" value="4">4th<br>
+      <input type="radio" name="year" value="5">5+<br>
+      Classes (ex: 6.001,6.004,etc):<br>
+      <input type="text" name="classes" value="">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form> 
+</body>
