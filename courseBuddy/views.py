@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 from django.http import HttpResponseRedirect
 
@@ -11,6 +12,10 @@ def index(request):
 
 def details(request):
     return render(request, 'courseBuddy/details.html')
+
+@login_required
+def home(request):
+	return render(request, 'courseBuddy/home.html')
 
 def peoples_list(request):
     the_peeps_file = 'courseBuddy/people_data.txt'
@@ -69,8 +74,6 @@ def data(request):
         myfile.write(newrow)
         print ("done")
     return render(request, 'courseBuddy/index.html')
-
-
 
 
 
