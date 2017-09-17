@@ -1,3 +1,4 @@
+import os
 classes_data = {} #class number mapped to students taking class
 peoples_data = [] #list of all peeps we have data for
 classes_listing_file = 'classes_listing.txt'
@@ -9,6 +10,7 @@ for c in classes_content:
     if len(c) > 0:
         classes_data[c.upper()] = []
 #print (classes_data)
+
 
 class Person:
     def __init__(self, id, first_name, last_name, year, current_classes):
@@ -39,7 +41,7 @@ class Person:
         s = s.strip().rstrip(',')+'.'
         return s
 
-file_location = 'people_data.txt'
+file_location = './people_data.txt'
 with open(file_location) as f:
     content = f.readlines()
 content = [x.strip() for x in content]
@@ -84,3 +86,8 @@ for peep in peoples_data:
         else:
             print ('no buddies in class '+ x_class)
     print ('-----------------')
+
+
+
+
+
